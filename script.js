@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.onreadystatechange = function () {
     // let pos = localStorage.getItem("where");
     let pos = document.cookie.split(";")[1].split("=")[1];
-    window.scrollTo(0, pos);
+    window.scroll(0, pos);
     console.log("Открутили", pos);
     // window.scrollTo(0, document.cookie);
 }
