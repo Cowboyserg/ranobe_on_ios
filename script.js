@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Запомнили новое положение", document.cookie.split(";")[1].split("=")[1]);
     }
 
-    function touchMove(event) {
-        alert("Двигаем на айфоне"+document.cookie);
-    }
     navInit() // запускаем функцию при загрузке страницы
     window.addEventListener('scroll', () => {
         // alert("Двигаем1");
@@ -23,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     //     navInit() // запускаем функцию при ресайзе страницы
     // })
 })
+
+function touchMove(event) {
+    document.cookie="where="+window.pageYOffset;
+    alert("Двигаем на айфоне"+document.cookie);
+}
 
 document.onreadystatechange = function () {
     // let pos = localStorage.getItem("where");
