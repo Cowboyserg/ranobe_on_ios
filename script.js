@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const navInit = () => {
-        alert("Двигаем")
+        alert("Двигаем");
         const nav = document.querySelector('.nav'); // ищем блок навигации
         const links = document.querySelectorAll('.nav__li'); // ищем все навигационные ссылки
         const sections = document.querySelectorAll('.section'); // ищем все секции
