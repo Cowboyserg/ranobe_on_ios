@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const navInit = () => {
-        alert("Двигаем");
+        alert("Двигаем"+document.cookie);
         document.addEventListener("touchmove", touchMove, false);
         const nav = document.querySelector('.nav'); // ищем блок навигации
         const links = document.querySelectorAll('.nav__li'); // ищем все навигационные ссылки
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function touchMove(event) {
-        alert("Двигаем на айфоне");
+        alert("Двигаем на айфоне"+document.cookie);
     }
     navInit() // запускаем функцию при загрузке страницы
     window.addEventListener('scroll', () => {
