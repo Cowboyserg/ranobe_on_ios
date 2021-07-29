@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     const navInit = () => {
-        alert("Двигаем"+document.cookie);
+        alert("Загрузили страницу"+document.cookie);
+        console.log("Загрузили страницу");
         document.addEventListener("touchmove", touchMove, false);
         const nav = document.querySelector('.nav'); // ищем блок навигации
         const links = document.querySelectorAll('.nav__li'); // ищем все навигационные ссылки
@@ -24,7 +24,7 @@ function touchMove(event) {
     // document.cookie="where="+window.pageYOffset;
     // document.cookie=window.pageYOffset;
     localStorage.setItem('where', window.pageYOffset.toString());
-    alert("Двигаем на айфоне"+localStorage.getItem("where"));
+    // alert("Двигаем на айфоне"+localStorage.getItem("where"));
 }
 
 document.onreadystatechange = function () {
